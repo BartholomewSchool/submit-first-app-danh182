@@ -1,55 +1,55 @@
 #include <iostream>
 using namespace std;
 
-int input1; //declares variables required as integers
-int input2;
-string(operation); //declares this variable as a string as the operation function requires it to be a string
-int answer;
+float input1;                                       //declares variables required as floating point integers
+float input2;
+string(operation);                                  //declares this variable as a string as the operation function requires it to be a string
+float answer;
 
-int giveanswer(int d) { //declares the function giveanswer which returns the answer stored in the integer d from a previous function
-    cout<<"The answer is: "<< d; //prints "The answer is: " followed by the answer stored in d
-    return d; //ends the program
+int giveanswer(float d) {                           //declares the function giveanswer which returns the answer stored in the integer d from a previous function
+    cout<<"The answer is: "<< d;                    //prints "The answer is: " followed by the answer stored in d
+    return d;                                       //ends the program
 }
-int add() { //declares the function add which is run through the operation function
-    cout<<"Enter the second number: "<<endl; //asks the user
-    cin>>input2;
-    answer = input1 + input2;
-    giveanswer(answer);
+int add() {                                         //declares the function add which is run through the operation function
+    cout<<"Enter the second number: "<<endl;        //asks the user to input a second number
+    cin>>input2;                                    //accepts input from the user and stores it in the variable input2
+    answer = input1 + input2;                       //performs the addition of the two inputs and stores the result in answer
+    giveanswer(answer);                             //calls the function giveanswer with the parameter answer to display the output
     return answer;
 }
-int subtract() {
-    cout<<"Enter the second number: "<<endl;
-    cin>>input2;
-    answer = input1 - input2;
-    giveanswer(answer);
+int subtract() {                                    //declares the function subtract
+    cout<<"Enter the second number: "<<endl;        //asks the user to input a second number
+    cin>>input2;                                    //accepts input from the user and stores it in input2
+    answer = input1 - input2;                       //performs the subtraction and stores the result in answer
+    giveanswer(answer);                             //calls giveanswer to display the result
     return answer;
 }
-int multiply() {
+int multiply() {                                    //similar to previous functions for multiply
     cout<<"Enter the second number: "<<endl;
     cin>> input2;
     answer = input1 * input2;
     giveanswer(answer);
     return answer;
 }
-int divide() {
+int divide() {                                      //similar to previous functions for divide
     cout<<"Enter the second number: "<<endl;
     cin>>input2;
     answer = input1 / input2;
     giveanswer(answer);
     return answer;
 }
-int square (int a) {
-    answer = a*a;
-    giveanswer(answer);
+int square (float a) {                              //declares the square function with the parameter a
+    answer = a*a;                                   //performs the square of a and stores the result in answer
+    giveanswer(answer);                             //calls the function giveanswer with the 
     return answer;
 }
 
 void sign() {
-    cout<<"Enter Operation (+, -, *, /, sq): "<<endl;
-    cin>> operation;
+    cout<<"Enter Operation (+, -, *, /, sq): "<<endl;   //asks the user to input the operation
+    cin>> operation;                                    //takes input from the user
     cin.ignore();
-    if (operation == "+" or operation == "plus" or operation == "add") {
-        add();
+    if (operation == "+" or operation == "plus" or operation == "add") {    //compares the inputted string with commom values for 'add'
+        add();                                                              //calls the function add if the operation inputted is add
     }
     else if (operation == "-" or operation == "minus" or operation == "subtract") {
         subtract();
@@ -64,8 +64,7 @@ void sign() {
         square(input1);
     }
     else {
-        cout<<"Invalid input";
-        
+        cout<<"Invalid input";    
     }
 }
 
