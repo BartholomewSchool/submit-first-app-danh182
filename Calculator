@@ -51,26 +51,26 @@ void sign() {
     if (operation == "+" or operation == "plus" or operation == "add") {    //compares the inputted string with commom values for 'add'
         add();                                                              //calls the function add if the operation inputted is add
     }
-    else if (operation == "-" or operation == "minus" or operation == "subtract") {
-        subtract();
+    else if (operation == "-" or operation == "minus" or operation == "subtract") {     //compares the inputted string with commom values for 'subtract'
+        subtract();                                                                     //calls the function subtract
     }
-    else if (operation == "*" or operation == "times" or operation == "multiply") {
+    else if (operation == "*" or operation == "times" or operation == "multiply") {     //similar to above however for multiply
         multiply();
     }
-    else if (operation == "/" or operation == "divide") {
+    else if (operation == "/" or operation == "divide") {                               //similar to above however for divide
         divide();
     }
-    else if (operation == "sq" or operation == "2" or operation == "square") {
-        square(input1);
+    else if (operation == "sq" or operation == "2" or operation == "square") {          //compares the inputted string with commom values for 'square'
+        square(input1);                                                                 //calls the square function with the parameter input1
     }
     else {
-        cout<<"Invalid input";    
+        cout<<"Invalid input";                                                          //returns "Invalid input" if a different answer is inputted
     }
 }
 
-int main() { 
-    cout<<"Enter the first number: "<<endl;
-    cin>> input1;
-    cin.ignore();
-    sign();
+int main() {                                            //starts the main program
+    cout<<"Enter the first number: "<<endl;             //asks the user to input the first number
+    cin>> input1;                                       //accepts input and stores it in the variable input1
+    cin.ignore();                                       
+    sign();                                             //calls the sign function to continue the program
 }
