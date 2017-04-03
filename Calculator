@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int input1;
+int input1; //declares variables required as integers
 int input2;
-string(operation);
+string(operation); //declares this variable as a string as the operation function requires it to be a string
 int answer;
 
-int giveanswer(int d) {
-    cout<<"The answer is: "<< d;
-    return d;
+int giveanswer(int d) { //declares the function giveanswer which returns the answer stored in the integer d from a previous function
+    cout<<"The answer is: "<< d; //prints "The answer is: " followed by the answer stored in d
+    return d; //ends the program
 }
-int add() {
-    cout<<"Enter the second number: "<<endl;
+int add() { //declares the function add which is run through the operation function
+    cout<<"Enter the second number: "<<endl; //asks the user
     cin>>input2;
     answer = input1 + input2;
     giveanswer(answer);
