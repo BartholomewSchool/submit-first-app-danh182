@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+int input1;
+int input2;
+string(operation);
+int answer;
+
+int giveanswer(int d) {
+    cout<<"The answer is: "<< d;
+    return d;
+}
+int add() {
+    cout<<"Enter the second number: "<<endl;
+    cin>>input2;
+    answer = input1 + input2;
+    giveanswer(answer);
+    return answer;
+}
+int subtract() {
+    cout<<"Enter the second number: "<<endl;
+    cin>>input2;
+    answer = input1 - input2;
+    giveanswer(answer);
+    return answer;
+}
+int multiply() {
+    cout<<"Enter the second number: "<<endl;
+    cin>> input2;
+    answer = input1 * input2;
+    giveanswer(answer);
+    return answer;
+}
+int divide() {
+    cout<<"Enter the second number: "<<endl;
+    cin>>input2;
+    answer = input1 / input2;
+    giveanswer(answer);
+    return answer;
+}
+int square (int a) {
+    answer = a*a;
+    giveanswer(answer);
+    return answer;
+}
+
+void sign() {
+    cout<<"Enter Operation (+, -, *, /, sq): "<<endl;
+    cin>> operation;
+    cin.ignore();
+    if (operation == "+" or operation == "plus" or operation == "add") {
+        add();
+    }
+    else if (operation == "-" or operation == "minus" or operation == "subtract") {
+        subtract();
+    }
+    else if (operation == "*" or operation == "times" or operation == "multiply") {
+        multiply();
+    }
+    else if (operation == "/" or operation == "divide") {
+        divide();
+    }
+    else if (operation == "sq" or operation == "2" or operation == "square") {
+        square(input1);
+    }
+    else {
+        cout<<"Invalid input";
+        
+    }
+}
+
+int main() { 
+    cout<<"Enter the first number: "<<endl;
+    cin>> input1;
+    cin.ignore();
+    sign();
+}
