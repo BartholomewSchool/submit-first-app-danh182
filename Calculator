@@ -8,7 +8,7 @@ string(operation);                                  //declares this variable as 
 float answer;
 int typeoperation;                                  //declares a variable to check operation
 
-int giveanswer(float xy) {                           //declares the function giveanswer which returns the answer stored in the floating point integer xy
+int giveanswer(float xy) {                          //declares the function giveanswer which returns the answer stored in the floating point integer xy
     if (typeoperation == 1) {
         cout<<input1<<" plus "<<input2<<" equals "<<xy<<endl;     
     }
@@ -103,9 +103,9 @@ int calcpowers() {
 }    
 void sign() {
     cout<<"Enter Operation (+, -, *, /, square, sqrt, sin, cos, tan, powers): "<<endl;   //asks the user to input the operation
-    cin>> operation;                                    //takes input from the user
+    cin>> operation;                                                                    //takes input from the user
     cin.ignore();
-    if (operation == "+" or operation == "plus" or operation == "add") {    //compares the inputted string with commom values for 'add'
+    if (operation == "+" or operation == "plus" or operation == "add") {                //compares the inputted string with commom values for 'add'
         typeoperation = 1;
         add();                                                                          //calls the function add if the operation inputted is add
     }
@@ -125,28 +125,28 @@ void sign() {
         typeoperation = 5;
         square(input1);                                                                 //calls the square function with the parameter input1
     }
-    else if (operation == "sqrt" or operation == "square root" or operation == "root") {          //compares the inputted string with commom values for 'square'
+    else if (operation == "sqrt" or operation == "square root" or operation == "root") {          //compares the inputted string with commom values for 'square root'
         typeoperation = 6;
-        calcsqrt(input1);                                                                 //calls the square function with the parameter input1
+        calcsqrt(input1);                                                                         //calls the calcsqrt function with the parameter input1
     }
-    else if (operation == "sin" or operation == "sine" or operation == "s") {          //compares the inputted string with commom values for 'square'
+    else if (operation == "sin" or operation == "sine" or operation == "s") {                     //compares the inputted string with commom values for 'sine'
         typeoperation = 7;
-        calcsin(input1);                                                                 //calls the square function with the parameter input1
+        calcsin(input1);                                                                          //calls the calcsin function with the parameter input1
     }
-    else if (operation == "cos" or operation == "cosine" or operation == "c") {          //compares the inputted string with commom values for 'square'
+    else if (operation == "cos" or operation == "cosine" or operation == "c") {                   //compares the inputted string with commom values for 'cosine'
         typeoperation = 8;
-        calccos(input1);                                                                 //calls the square function with the parameter input1
+        calccos(input1);                                                                          //calls the calccos function with the parameter input1
     }
-    else if (operation == "tan" or operation == "tangent" or operation == "t") {          //compares the inputted string with commom values for 'square'
+    else if (operation == "tan" or operation == "tangent" or operation == "t") {                  //compares the inputted string with commom values for 'tan'
         typeoperation = 9;
-        calctan(input1);                                                                 //calls the square function with the parameter input1
+        calctan(input1);                                                                          //calls the calctan function with the parameter input1
     }
-    else if (operation == "power" or operation == "powers" or operation == "p") {          //compares the inputted string with commom values for 'square'
+    else if (operation == "power" or operation == "powers" or operation == "p") {                 //compares the inputted string with commom values for 'to the power of'
         typeoperation = 10;
-        calcpowers();                                                                 //calls the square function with the parameter input1
+        calcpowers();                                                                             //calls the calcpowers function with the parameter input1
     }
     else {
-        cout<<"Invalid input";                                                          //returns "Invalid input" if a different answer is inputted
+        cout<<"Invalid input";                                                           //returns "Invalid input" if a different answer is inputted
     }
 }
 
