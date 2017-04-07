@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <cmath>                                    //includes the c++ math module for the trigonometry calculations
 using namespace std;
 
 float input1;                                       //declares variables required as floating point integers
@@ -9,26 +9,26 @@ float answer;
 int typeoperation;                                  //declares a variable to check operation
 
 int giveanswer(float xy) {                          //declares the function giveanswer which returns the answer stored in the floating point integer xy
-    if (typeoperation == 1) {
-        cout<<input1<<" plus "<<input2<<" equals "<<xy<<endl;     
+    if (typeoperation == 1) {                                       //checks what the operation was from the variable typeoperation assigned in the sign function
+        cout<<input1<<" plus "<<input2<<" equals "<<xy<<endl;       //Outputs the result stored in xy along with the two inputs and the operation
     }
-    else if (typeoperation == 2) {
+    else if (typeoperation == 2) {                                  //similar as above for minus
         cout<<input1<<" minus "<<input2<<" equals "<<xy<<endl;     
     }
     else if (typeoperation == 3) {
-        cout<<input1<<" times "<<input2<<" equals "<<xy<<endl;     
+        cout<<input1<<" times "<<input2<<" equals "<<xy<<endl;      //displays multiply calculations
     }
     else if (typeoperation == 4) {
-        cout<<input1<<" divided by "<<input2<<" equals "<<xy<<endl;     
+        cout<<input1<<" divided by "<<input2<<" equals "<<xy<<endl; //displays division calculations    
     }
     else if (typeoperation == 5) {
-        cout<<input1<<" squared "<<"equals "<<xy<<endl;     
+        cout<<input1<<" squared "<<"equals "<<xy<<endl;             //for squared calculations
     }
     else if (typeoperation == 6) {
-        cout<<"The square root of "<<input1<<" equals "<<xy<<endl;     
+        cout<<"The square root of "<<input1<<" equals "<<xy<<endl;  //for square root calculations   
     }
     else if (typeoperation == 7) {
-        cout<<"sin("<<input1<<") equals "<<xy<<endl;     
+        cout<<"sin("<<input1<<") equals "<<xy<<endl;                //for tigonometry calculations (including sin, cos and tan (below))
     }
     else if (typeoperation == 8) {
         cout<<"cos("<<input1<<") equals "<<xy<<endl;     
@@ -37,7 +37,7 @@ int giveanswer(float xy) {                          //declares the function give
         cout<<"tan("<<input1<<") equals "<<xy<<endl;     
     }
     else if (typeoperation == 10) {
-        cout<<input1<<" to the power of "<<input2<< " equals "<<xy<<endl;     
+        cout<<input1<<" to the power of "<<input2<< " equals "<<xy<<endl;     //for powers calculations
     }
     return xy;                                      //ends the program
 }
@@ -74,27 +74,27 @@ int square (float a) {                              //declares the square functi
     giveanswer(answer);                             //calls the function giveanswer with the 
     return answer;
 }
-int calcsqrt (float b) {                              
+int calcsqrt (float b) {                            //calculates the square root of the input  
     answer = sqrt(b);                                 
-    giveanswer(answer);                        
+    giveanswer(answer);                             //calls the giveanswer function with the answer as the parameter
     return answer;
 }
-int calcsin (float c) {                              
+int calcsin (float c) {                             //similar as above for sin 
     answer = sin(c);                                 
     giveanswer(answer);                        
     return answer;
 }
-int calccos (float d) {                              
+int calccos (float d) {                             //for cos calculations
     answer = cos(d);                                 
     giveanswer(answer);                        
     return answer;
 }
-int calctan (float e) {                              
+int calctan (float e) {                             //for tan calculations 
     answer = tan(e);                                 
     giveanswer(answer);                        
     return answer;
 }
-int calcpowers() {
+int calcpowers() {                                  //for powers calculations
     cout<<"Enter the power: "<<endl;       
     cin>>input2;
     answer = pow(input1, input2);
